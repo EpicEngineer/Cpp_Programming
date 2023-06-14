@@ -11,14 +11,19 @@ int MyFunction1(int Param_one, int Param_two)
 
 void MyFunction2()
 {
-	cout << "Void functions also need the 'return' statement! \n";
-	return;
+	cout << "Void functions doesn't need the 'return' statement! \n";
+	// return;
+	
+	// When the last line of code of this function (that have a 'void' return-type) is executed,
+	// the next expression to be executed will be on the caller, no matter if there is an explicit "return" statement...
+	
+	// When the return type of the function is "void", the "return" statement is not necessary (it will be implicit),
+	// since the generated Assembly code is the same for implicit and explicit "return" statements.
 }
 
 void MyFunction3()
 {
 	cout << "Welcome! \n";
-	return;
 }
 
 int main()
