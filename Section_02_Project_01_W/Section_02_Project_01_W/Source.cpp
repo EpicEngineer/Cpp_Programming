@@ -1,7 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void main()
+int MyFunction1(int Param_one, int Param_two)
+{
+	int local_variable;
+	local_variable = Param_one + Param_two;
+	cout << "The local variable is: " << local_variable << " !" << endl;
+	return local_variable;
+}
+
+void MyFunction2()
+{
+	cout << "Void functions also need the 'return' statement! \n";
+	return;
+}
+
+void MyFunction3()
+{
+	cout << "Welcome! \n";
+	return;
+}
+
+int main()
 {
 	for (;;)
 	{
@@ -17,8 +37,8 @@ void main()
 		std::string myString;
 		myString = "hello";
 
-		cout << myCharacter << "\n" << myInteger << endl;
 		// std::cout << "You Died! \n";  (line 2)
+		cout << myCharacter << "\n" << myInteger << endl;
 
 		myCharacter = 'n';
 		myInteger = 24;
@@ -37,6 +57,10 @@ void main()
 		{
 			cout << "Third condition was achieved!" << endl;
 		}
+
+		MyFunction1(myInteger, 5);
+		MyFunction3();
+		MyFunction2();
 
 
 		// ====================================================================================================
